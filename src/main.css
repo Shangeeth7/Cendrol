@@ -1,0 +1,276 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(
+    to right,
+    #4286f4,
+    #3f7fe2,
+    #3e78d0,
+    #3d71bf,
+    #3d6aad,
+    #3e649f,
+    #3e5d91,
+    #3e5783,
+    #3d5175,
+    #3c4a67,
+    #3a4459,
+    #383e4c
+  );
+}
+
+.bouncing {
+  color: #27b06a;
+  margin-top: 20px;
+  animation: bounce 1s infinite;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.buttonsss {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 80%;
+}
+
+.one-btns {
+  border-radius: 10px;
+  height: 10rem;
+  width: 15rem;
+}
+
+.buttonsss button {
+  flex: 1 0 20%;
+  margin: 5px;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-image: linear-gradient(
+    to right,
+    #2c5364,
+    #2a4e5e,
+    #274a58,
+    #254552,
+    #23414c,
+    #213d47,
+    #1e3842,
+    #1c343d,
+    #192f37,
+    #152a32,
+    #12252c,
+    #0f2027
+  );
+
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 800px;
+  border-radius: 10px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 20px;
+}
+
+.modal .content-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.modal .content-box button {
+  display: block;
+  width: 50%;
+  margin: 20px auto;
+  background-color: #1c4fd8;
+  height: 40px;
+}
+
+.buttonsss button,
+.close-button,
+.content-box button {
+  outline: none;
+  border: none;
+  user-select: none;
+}
+
+.buttonsss button:active,
+.close-button:active,
+.content-box button:active {
+  transform: none;
+}
+
+.buttonsss button:hover {
+  transform: scale(0.99);
+  cursor: pointer;
+}
+
+.buttonsss button.active {
+  background-color: grey;
+}
+
+.next-joke-button {
+  font-size: medium;
+  font-weight: 900;
+}
+.next-joke-button:hover {
+  background-color: #2464eb !important;
+  cursor: pointer;
+}
+
+.category-title {
+  font-size: 30px;
+}
+
+.one-btns {
+  border-radius: 10px;
+  height: 10rem;
+  width: 15rem;
+  padding: 1rem;
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.below-cat {
+  font-size: 35px;
+  font-weight: 700;
+}
+.currentJoke {
+  font-size: 30px;
+  font-weight: 700;
+  color: lightgray;
+}
+
+@media (max-width: 768px) {
+  .one-btns {
+    max-height: 15px;
+    max-width: 50px;
+  }
+
+  .category-title {
+    font-size: 12px;
+    font-weight: 900;
+    word-wrap: break-word;
+  }
+
+  .joke-caption {
+    display: none;
+  }
+  .modal {
+    top: 75%;
+
+    width: 90%;
+    padding: 10px;
+  }
+  .below-cat {
+    font-size: 25px;
+    font-weight: 700;
+  }
+  .currentJoke {
+    font-size: 20px;
+    font-weight: 700;
+    color: lightgray;
+  }
+
+  .buttonsss button.active {
+    background-color: grey;
+    border: 1px solid black;
+  }
+}
+
+.loader {
+  border: 16px dotted grey;
+
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  border: 16px dotted grey;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 4s linear infinite;
+
+  /* center loader */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loader1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+}
+
+.loader1 div {
+  width: 20px;
+  height: 100px;
+  background: white;
+  animation: pulse 1s infinite;
+}
+
+.loader1 div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loader1 div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    height: 100px;
+  }
+
+  50% {
+    height: 150px;
+  }
+}
