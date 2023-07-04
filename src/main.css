@@ -180,7 +180,7 @@ body {
 
   .category-title {
     font-size: 12px;
-    font-weight: 900;
+
     margin-top: 15px !important;
     word-wrap: break-word;
   }
@@ -207,5 +207,14 @@ body {
   .buttonsss button.active {
     background-color: grey;
     border: 1px solid black;
+  }
+  .buttonsss {
+    width: 90%;
+  }
+
+  .one-btns {
+    border-radius: 10px;
+    height: 9rem;
+    min-width: 4rem;
   }
 }
